@@ -8,8 +8,53 @@
     <title>Pizza Order</title>
   </head>
   <body>
-    <h1>Made to order pizza</h1>
-    
+    <div class="container">
+      <h1>Made to order pizza</h1>
+      <hr>
+      <form id="new-customer">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="name">First Name:</label>
+              <input type="text"  class="form-control" id="customer">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <h4>Choose a size:</h4>
+            <select class="form-control" id="size">
+              <option style="display:none;"></option>
+              <option value="1"><em>Small</em></option>
+              <option value="2"><em>Medium</em></option>
+              <option value="3"><em>Large</em></option>
+              <option value="4"><em>Extra Large</em></option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <h4>Choose a topping:</h4>
+            <select class="form-control" id="topping">
+              <option style="display:none;"></option>
+              <option value="1">pepperoni</option>
+              <option value="2">sausage</option>
+              <option value="3">arrugula</option>
+              <option value="4">peppers</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="btn-primary">Submit Order</button>
+      </form>
 
+
+
+
+      <h3>Your order:</h3>
+      <ul id="purchase">
+      </ul>
+      <div id="show-order">
+        <p>Customer: <span class="name"></span></p>
+        <p>Size: <span class="size"></span></p>
+        <p>Topping: <span class="topping"></span></p>
+        <p>Cost: <span class="cost"></span></p>
+      </div>
+    </div>
   </body>
 </html>
