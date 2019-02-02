@@ -1,32 +1,36 @@
 function Pizza() {
-  this.order = []
+  this.orders = []
 }
 
 Pizza.prototype.addOrder = function(order) {
-  this.order.push(order);
+  this.orders.push(order);
 }
 
 function Order(name, size, topping) {
   this.name = name,
   this.size = size,
   this.topping = topping
-  console.log(order)
 }
 
+Order.prototype.cost = function() {
+  return this.name + ", your total is:" + this.size + this.topping;
+  console.log(cost);
+};
+
+// console.log(cost);
 
 
-var pizza = new Pizza();
-
+//
 function displayOrderDetails(pizzaToDisplay) {
-  var orderList = $("ul#order");
+  var orderList = $("div#complete");
   var htmlForOrderInfo = "";
-  pizzaToDisplay.order.forEach(function(order) {
-    htmlForOrderInfo += "<li>" + order.name + "</li>";
-  });
+//   pizzaToDisplay.order.forEach(function(order) {
+//     htmlForOrderInfo += "<li>" + order.name + "</li>";
+  // };
   orderList.html(htmlForOrderInfo);
 };
 
-function attachOrderListeners() {
+function completeOrder() {
   $("ul#orders").on("click", "li", function() {
     showOrder(this.order);
   });
@@ -37,13 +41,19 @@ $(document).ready(function() {
   $("form#new-customer").submit(function(event) {
     event.preventDefault();
     var inputtedName = $("input#customer").val();
-    var inputtedSize = $("select#size").val();
-    var inputtedTopping = $("select#topping").val();
+    var inputtedSize = $("input:radio[name=size]:checked").val();
+    var inputtedTopping = $("input:radio[name=topping]:checked").val();
+    var sizeInt = parseInt(inputtedSize);
+    var toppingInt = parseInt(inputtedTopping);
+    console.log(sizeInt+toppingInt)
     var newOrder = new Order (inputtedName, inputtedSize, inputtedTopping);
-    pizza.addOrder(newOrder);
-    displayOrderDetails(pizza);
+    // pizza.addOrder(newOrder);
+    // displayOrderDetails(pizza);
+    // $("#show-order").text(newOrder);
+    // console.log(pizza.order)
+    // // $("#complete").toggle();
 
+    (".name").text(inputtedName);
 
-
-  })
-})
+  });
+});

@@ -12,16 +12,84 @@
       <h1>Made to order pizza</h1>
       <hr>
       <form id="new-customer">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="form-group">
-              <label for="name">First Name:</label>
-              <input type="text"  class="form-control" id="customer">
-            </div>
+        <div class="information">
+          <label for="name">Your Full Name:</label>
+          <input type="text" id="customer" required>
+        </div>
+        <div id="size">
+          <h4>Choose a size:</h4>
+          <div class="radio">
+            <label>
+              <input type="radio" name="size" value="5" checked>
+              Small
+            </label>
           </div>
-          <div class="col-md-4">
-            <h4>Choose a size:</h4>
-            <select class="form-control" id="size">
+          <div class="radio">
+            <label>
+              <input type="radio" name="size" value="8">
+              Medium
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="size" value="10">
+              Large
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="size" value="15">
+              XL
+            </label>
+          </div>
+        </div>
+        <div id="topping">
+          <h4>Choose a topping:</h4>
+          <div class="radio">
+            <label>
+              <input type="radio" name="topping" value="0" checked>
+              none
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="topping" value="2">
+              Pepperoni
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="topping" value="1">
+              Olives
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="topping" value="1">
+              Peppers
+            </label>
+          </div>
+        </div>
+        <button type="submit" class="btn-primary">Submit Order</button>
+      </form>
+      <div id="complete">
+        <h3>Your order:</h3>
+        <!-- <ul id="order">
+        </ul> -->
+        <div id="show-order">
+          <p>Customer: <span class="name"></span></p>
+          <p>Size: <span class="size"></span></p>
+          <p>Topping: <span class="topping"></span></p>
+          <p>Cost: <span class="cost"></span></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+
+            <!-- <select class="form-control" id="size">
               <option style="display:none;"></option>
               <option value="1">Small</option>
               <option value="2">Medium</option>
@@ -38,25 +106,4 @@
               <option value="3">arrugula</option>
               <option value="4">peppers</option>
             </select>
-          </div>
-        </div>
-        <button type="submit" class="btn-primary">Submit Order</button>
-      </form>
-
-
-
-
-      <h3>Your order:</h3>
-      <ul id="order">
-      </ul>
-      <div id="show-order">
-        <p>Customer: <span class="name"></span></p>
-        <p>Size: <span class="size"></span></p>
-        <p>Topping: <span class="topping"></span></p>
-        <p>Cost: <span class="cost"></span></p>
-        <div id="buttons">
-        </div>
-      </div>
-    </div>
-  </body>
-</html>
+          </div> -->
