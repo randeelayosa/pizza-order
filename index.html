@@ -9,84 +9,146 @@
   </head>
   <body>
     <div class="container">
-      <h1>Made to order pizza</h1>
-      <hr>
-      <form id="new-customer">
-        <div class="information">
-          <label for="name">Your Full Name:</label>
-          <input type="text" id="customer" required>
+      <div class="jumbotron">
+        <h1>Made to Order Pizza</h1>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <form id="new-customer">
+          <h2>Create your order:</h2>
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text"  class="form-control" id="name">
+            </div>
+            <div class="form-group">
+              <label for="size">Size: Small | Medium | Large</label>
+              <input type="text"  class="form-control" id="size">
+            </div>
+            <div class="form-group">
+              <label for="topping">Topping: Pepperoni | Olives | Peppers</label>
+              <input type="text"  class="form-control" id="topping">
+            </div>
+            <button type="submit" class="btn-danger">Submit Order</button>
+          </form>
+          <hr>
+          <h2>Your Order:</h2>
+          <ul id="order">
+          </ul>
         </div>
-        <div id="size">
-          <h4>Choose a size:</h4>
-          <div class="radio">
-            <label>
-              <input type="radio" name="size" value="5" checked>
-              Small
-            </label>
+        <div class="col-md-6">
+          <div id="show-order">
+            <p>Name: <span class="name"></span></p>
+            <p>Size: <span class="size"></span></p>
+            <p>Topping: <span class="topping"></span></p>
+            <button type="submit"  onClick="refreshPage()">Make another order</button>
+            <div id="buttons">
+            </div>
           </div>
-          <div class="radio">
-            <label>
-              <input type="radio" name="size" value="8">
-              Medium
-            </label>
-          </div>
-          <div class="radio">
-            <label>
-              <input type="radio" name="size" value="10">
-              Large
-            </label>
-          </div>
-          <div class="radio">
-            <label>
-              <input type="radio" name="size" value="15">
-              XL
-            </label>
-          </div>
-        </div>
-        <div id="topping">
-          <h4>Choose a topping:</h4>
-          <div class="radio">
-            <label>
-              <input type="radio" name="topping" value="0" checked>
-              none
-            </label>
-          </div>
-          <div class="radio">
-            <label>
-              <input type="radio" name="topping" value="2">
-              Pepperoni
-            </label>
-          </div>
-          <div class="radio">
-            <label>
-              <input type="radio" name="topping" value="1">
-              Olives
-            </label>
-          </div>
-          <div class="radio">
-            <label>
-              <input type="radio" name="topping" value="1">
-              Peppers
-            </label>
-          </div>
-        </div>
-        <button type="submit" class="btn-primary">Submit Order</button>
-      </form>
-      <div id="complete">
-        <h3>Your order:</h3>
-        <!-- <ul id="order">
-        </ul> -->
-        <div id="show-order">
-          <p>Customer: <span class="name"></span></p>
-          <p>Size: <span class="size"></span></p>
-          <p>Topping: <span class="topping"></span></p>
-          <p>Cost: <span class="cost"></span></p>
         </div>
       </div>
     </div>
   </body>
 </html>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <body>
+    <div class="container">
+      <h1>Made to order pizza</h1>
+      <div class="row">
+        <div class="col-md-6">
+          <hr>
+          <h2>Create your order:</h2>
+          <h4>Personal info:</h4>
+          <form id="new-order">
+            <div class="form-group">
+              <label for="name">Full Name:</label>
+              <input type="text"  class="form-control" id="name">
+            </div>
+            <div id="size">
+              <h4>Choose a size:</h4>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="size" value="5" checked>
+                  Small
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="size" value="8">
+                  Medium
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="size" value="10">
+                  Large
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="size" value="15">
+                  XL
+                </label>
+              </div>
+            </div>
+            <div id="topping">
+              <h4>Choose a topping:</h4>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="topping" value="0" checked>
+                  none
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="topping" value="2">
+                  Pepperoni
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="topping" value="1">
+                  Olives
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="topping" value="1">
+                  Peppers
+                </label>
+              </div>
+            </div>
+            <button type="submit" class="btn-primary">Submit Order</button>
+          </form>
+          <hr>
+          <h2>Your Order:</h2>
+          <ul id="orders">
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <div id="show-order">
+            <p>Name: <span class="name"></span></p>
+            <p>Size: <span class="size"></span></p>
+            <p>Topping: <span class="topping"></span></p>
+            <div id="buttons">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body> -->
 
 
             <!-- <select class="form-control" id="size">
