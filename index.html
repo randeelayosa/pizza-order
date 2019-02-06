@@ -10,6 +10,75 @@
   <body>
     <div class="container">
       <div class="jumbotron">
+        <h1>Pizzeria</h1>
+      </div>
+      <hr>
+      <h2>Create your order</h2>
+      <form id="new-customer">
+        <div class="form-group">
+          <input type="text"  class="form-control" id="name" placeholder="Full Name" required>
+        </div>
+        <h5>Choose a topping:</h5>
+        <select class="form-control" id="size">
+          <option style="display:none;"></option>
+          <option value="5">Small</option>
+          <option value="8">Medium</option>
+          <option value="10">Large</option>
+          <option value="15">Extra Large</option>
+        </select>
+        <h5>Choose a topping:</h5>
+        <select class="form-control" id="topping">
+          <option style="display:none;"></option>
+          <option value="3">Pepperoni</option>
+          <option value="1">Arugula</option>
+          <option value="2">Peppers</option>
+          <option value="0">none</option>
+        </select>
+        <button type="submit" class="btn-danger">Submit Order</button>
+      </form>
+      <hr>
+      <div id="show-order">
+        <h4><span class="name"></span>, your total is: <span class="highlight cost">$</span></h4>
+        <p>Pie Size: $<span class="size"></span></p>
+        <p>Topping: $<span class="topping"></span></p>
+        <button type="submit" class="btn-danger" onClick="refreshPage()">Make another order</button>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- FIRST SUBMISSION
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Pizza Order</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
         <h1>Made to Order Pizza</h1>
       </div>
       <div class="row">
@@ -40,7 +109,7 @@
             <p>Name: <span class="name"></span></p>
             <p>Size: <span class="size"></span></p>
             <p>Topping: <span class="topping"></span></p>
-            <button type="submit"  onClick="refreshPage()">Make another order</button>
+            <button type="submit" onClick="refreshPage()">Make another order</button>
             <div id="buttons">
             </div>
           </div>
@@ -48,124 +117,4 @@
       </div>
     </div>
   </body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <!-- <body>
-    <div class="container">
-      <h1>Made to order pizza</h1>
-      <div class="row">
-        <div class="col-md-6">
-          <hr>
-          <h2>Create your order:</h2>
-          <h4>Personal info:</h4>
-          <form id="new-order">
-            <div class="form-group">
-              <label for="name">Full Name:</label>
-              <input type="text"  class="form-control" id="name">
-            </div>
-            <div id="size">
-              <h4>Choose a size:</h4>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="size" value="5" checked>
-                  Small
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="size" value="8">
-                  Medium
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="size" value="10">
-                  Large
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="size" value="15">
-                  XL
-                </label>
-              </div>
-            </div>
-            <div id="topping">
-              <h4>Choose a topping:</h4>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="topping" value="0" checked>
-                  none
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="topping" value="2">
-                  Pepperoni
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="topping" value="1">
-                  Olives
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="topping" value="1">
-                  Peppers
-                </label>
-              </div>
-            </div>
-            <button type="submit" class="btn-primary">Submit Order</button>
-          </form>
-          <hr>
-          <h2>Your Order:</h2>
-          <ul id="orders">
-          </ul>
-        </div>
-        <div class="col-md-6">
-          <div id="show-order">
-            <p>Name: <span class="name"></span></p>
-            <p>Size: <span class="size"></span></p>
-            <p>Topping: <span class="topping"></span></p>
-            <div id="buttons">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body> -->
-
-
-            <!-- <select class="form-control" id="size">
-              <option style="display:none;"></option>
-              <option value="1">Small</option>
-              <option value="2">Medium</option>
-              <option value="3">Large</option>
-              <option value="4">Extra Large</option>
-            </select>
-          </div>
-          <div class="col-md-4">
-            <h4>Choose a topping:</h4>
-            <select class="form-control" id="topping">
-              <option style="display:none;"></option>
-              <option value="1">pepperoni</option>
-              <option value="2">sausage</option>
-              <option value="3">arrugula</option>
-              <option value="4">peppers</option>
-            </select>
-          </div> -->
+</html> -->

@@ -11,24 +11,37 @@ h1{
 }
 
 h2{
+  text-align: center;
   padding: 30px;
+}
+
+h4{
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 30px;
 }
 
 form{
   padding: 30px;
 }
 
-ul#order{
-  text-align: center;
-  list-style-type: none;
-}
-
 li{
   text-align: center;
 }
 
+hr{
+  margin-top: 60px;
+}
+
 .jumbotron{
   background-color: white;
-  height: 50px;
-  width: auto;
+}
+
+.btn-danger{
+  margin: 30px;
+  float: right;
+}
+
+.highlight {
+  color: red;
 }
