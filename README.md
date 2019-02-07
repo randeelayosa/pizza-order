@@ -6,7 +6,7 @@
 
 ## Description
 
-_A program created with JavaScript and HTML where a user can order a pizza._
+_A program created with JavaScript and HTML where a user can select a pizza size and topping, and receive the total cost of their order._
 
 ### Specs
 | Spec | Input | Output |
