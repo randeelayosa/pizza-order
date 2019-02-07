@@ -5,30 +5,30 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/scripts.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed|Lobster+Two" rel="stylesheet">
     <title>Pizza Order</title>
   </head>
   <body>
     <div class="container">
       <div class="jumbotron">
-        <h1>Pizzeria</h1>
+        <h1>Pete Zaria</h1>
       </div>
-      <hr>
-      <h2>Create your order</h2>
       <form id="new-customer">
+        <hr>
+        <h2>Create your order</h2>
         <div class="form-group">
           <input type="text"  class="form-control" id="name" placeholder="Full Name" required>
         </div>
-        <h5>Choose a topping:</h5>
-        <select class="form-control" id="size">
-          <option style="display:none;"></option>
+        <select class="form-control" id="size" required>
+          <option value="" selected disabled>Choose a size</option>
           <option value="5">Small</option>
           <option value="8">Medium</option>
           <option value="10">Large</option>
           <option value="15">Extra Large</option>
         </select>
-        <h5>Choose a topping:</h5>
-        <select class="form-control" id="topping">
-          <option style="display:none;"></option>
+        <br>
+        <select class="form-control" id="topping" required>
+          <option value="" selected disabled>Choose a topping</option>
           <option value="3">Pepperoni</option>
           <option value="1">Arugula</option>
           <option value="2">Peppers</option>
@@ -38,83 +38,13 @@
       </form>
       <hr>
       <div id="show-order">
-        <h4><span class="name"></span>, your total is: <span class="highlight cost">$</span></h4>
-        <p>Pie Size: $<span class="size"></span></p>
-        <p>Topping: $<span class="topping"></span></p>
-        <button type="submit" class="btn-danger" onClick="refreshPage()">Make another order</button>
+        <div id="price-text">
+          <h4><strong><em><span class="name"></span></em></strong>, your total is: <span class="cost highlight"></span></h4>
+          <p>Pie Size: <strong>$<span class="size"></span></strong></p>
+          <p>Topping: <strong>$<span class="topping"></span></strong></p>
+          <button type="submit" class="btn-danger" onClick="refreshPage()">Make another order</button>
+        </div>
       </div>
     </div>
   </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- FIRST SUBMISSION
-
-<!DOCTYPE html>
-<html>
-  <head>
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <script src="js/jquery-3.3.1.js"></script>
-    <script src="js/scripts.js"></script>
-    <title>Pizza Order</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="jumbotron">
-        <h1>Made to Order Pizza</h1>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <form id="new-customer">
-          <h2>Create your order:</h2>
-            <div class="form-group">
-              <label for="name">Full Name</label>
-              <input type="text"  class="form-control" id="name">
-            </div>
-            <div class="form-group">
-              <label for="size">Size: Small | Medium | Large</label>
-              <input type="text"  class="form-control" id="size">
-            </div>
-            <div class="form-group">
-              <label for="topping">Topping: Pepperoni | Olives | Peppers</label>
-              <input type="text"  class="form-control" id="topping">
-            </div>
-            <button type="submit" class="btn-danger">Submit Order</button>
-          </form>
-          <hr>
-          <h2>Your Order:</h2>
-          <ul id="order">
-          </ul>
-        </div>
-        <div class="col-md-6">
-          <div id="show-order">
-            <p>Name: <span class="name"></span></p>
-            <p>Size: <span class="size"></span></p>
-            <p>Topping: <span class="topping"></span></p>
-            <button type="submit" onClick="refreshPage()">Make another order</button>
-            <div id="buttons">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>
-</html> -->
