@@ -11,9 +11,9 @@ _A program created with JavaScript and HTML where a user can order a pizza._
 ### Specs
 | Spec | Input | Output |
 | :-------------     | :------------- | :------------- |
-| **Program returns user inputted information after clicking Submit Button** | "Name" | "Name" |
-| **Program Determines the cost of chosen items** | "Small, Pepperoni" | "$7.00" |
-| **Program allows user to see their order information by clicking on their total cost**| "$7.00" | "Name, Size, Topping" |
+| **Program takes in user inputted information** | "Name, Size, Topping" | User's inputs of "Name, Size, Topping" |
+| **Program determines the cost of chosen items** | "Small, Pepperoni" | "5+3" |
+| **Program shows the pizza cost after order submission**| "Submit" | "(Name), your total is $8.00" |
 
 ## Setup/Installation Requirements
 
